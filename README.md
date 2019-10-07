@@ -32,7 +32,7 @@ Topics:
     Done - <Route exact path="/" component={MovieList} />
 
   * one route that will take an `id` parameter after`/movies/` (ex: `/movies/2`, `/movies/3` where the id is dynamic). This route should load the `Movie` component. 
-    Done <Route path="/movies:id" component={Movie} /> Added  render. 
+   <Route path="/movies:id" render={(props) => <Movie {...props} pickMovie={addToSavedList} /> } />
 
 ### Part 2:
 

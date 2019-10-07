@@ -6,8 +6,6 @@ import SavedList from './Movies/SavedList';
 import Movie from "./Movies/Movie.js";
 import MovieList from "./Movies/MovieList.js"; 
 
-
-
 const App = () => {
   const [savedList, setSavedList] = useState( [] );
 
@@ -23,8 +21,9 @@ const App = () => {
         {/* You wouldn't render this ^^^, because its' for the home page, don't need any props. */}
 
         {/* Movies Route  */}  
-      <Route path="/movies:id" render={(props) => <Movie {...props} pickMovie={addToSavedList} /> } />
-        {/* Have to add the state/props */}
+      <Route path="/movies/:id" render={(props) => <Movie {...props} saveMovie={addToSavedList} /> } />
+       
+       {/* Why use addToSavedList? as the state/data  */}
 
     </div>
   );
